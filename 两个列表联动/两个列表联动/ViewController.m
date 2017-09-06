@@ -39,15 +39,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-//    self.leftTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 64, self.view.bounds.size.width *0.4, self.view.bounds.size.height-64) style:UITableViewStylePlain];
-//    [self.view addSubview:self.leftTableView];
     [self.view addSubview:({
         self.leftTableView = [[UITableView alloc]initWithFrame:(CGRect){0,64,self.view.bounds.size.width *0.4,self.view.bounds.size.height-64} style:UITableViewStylePlain];
         self.leftTableView;
     })];
-//    
-//    self.rightTableView = [[UITableView alloc]initWithFrame:CGRectMake(self.view.bounds.size.width*0.4, 64, self.view.bounds.size.width*0.6, self.view.bounds.size.height-64) style:UITableViewStylePlain];
-//    [self.view addSubview:self.rightTableView];
+    
     [self.view addSubview:({
          self.rightTableView = [[UITableView alloc]initWithFrame:(CGRect){self.view.bounds.size.width*0.4, 64, self.view.bounds.size.width*0.6, self.view.bounds.size.height-64} style:UITableViewStylePlain];
         self.rightTableView;
