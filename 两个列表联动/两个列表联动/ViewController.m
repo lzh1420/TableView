@@ -8,7 +8,6 @@
 
 #import "ViewController.h"
 
-
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic,strong) UITableView * leftTableView;
@@ -20,6 +19,7 @@
 
 @implementation ViewController
 
+// 数据源
 -(NSMutableArray *)dataSource{
     
     if (!_dataSource) {
@@ -38,12 +38,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+//    初始化左边列表
     [self.view addSubview:({
         self.leftTableView = [[UITableView alloc]initWithFrame:(CGRect){0,64,self.view.bounds.size.width *0.4,self.view.bounds.size.height-64} style:UITableViewStylePlain];
         self.leftTableView;
     })];
     
+//    初始化右边列表
     [self.view addSubview:({
          self.rightTableView = [[UITableView alloc]initWithFrame:(CGRect){self.view.bounds.size.width*0.4, 64, self.view.bounds.size.width*0.6, self.view.bounds.size.height-64} style:UITableViewStylePlain];
         self.rightTableView;
@@ -77,6 +78,7 @@
 }
 
 
+// 配置Cell
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     static NSString *ID = @"cell";
