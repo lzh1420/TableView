@@ -110,9 +110,6 @@
     if (tableView == self.leftTableView) {
 //        [self.leftTableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] animated:YES scrollPosition:UITableViewScrollPositionTop];
     }
-//    else{
-//        [self.rightTableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] animated:YES scrollPosition:UITableViewScrollPositionTop];
-//    }
     self.currentSelectIndexPath = indexPath;
     
 }
